@@ -3,16 +3,39 @@ const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     console.log(req.url);
-    let body = req.url;
-    if(body === `/css/style.css`) {
-        body = fs.readFileSync(`css/style.css`, 'utf8')
-    } else if (body === `/script.js`) {
-        body = fs.readFileSync(`script.js`, 'utf8')
-    } else {
-        body = fs.readFileSync(`public/index.html`, 'utf8')
+    let body;
+
+    switch (req.url) {
+        case `/css/style.css`:
+            body = fs.readFileSync(`css/style.css`, 'utf8');
+            break;
+        case `/script.js`:
+            body = fs.readFileSync(`script.js`, 'utf8');
+            break;
+        case `/img/product-1.jpg`:
+            body = fs.readFileSync(`img/product-1.jpg`);
+            break;
+        case `/img/product-2.jpg`:
+            body = fs.readFileSync(`img/product-2.jpg`);
+            break;
+        case `/img/product-3.jpg`:
+            body = fs.readFileSync(`img/product-3.jpg`);
+            break;
+        case `/img/product-4.jpg`:
+            body = fs.readFileSync(`img/product-4.jpg`);
+            break;
+        default:
+            body = fs.readFileSync(`public/index.html`, 'utf8');
+            break;
     }
-    /*const body = req.url === `/css/style.css`
-    ? fs.readFileSync(`css/style.css`, 'utf8') : fs.readFileSync(`public/index.html`, 'utf8')*/
+
+    /*
+    try {
+        body = fs.readFileSync(req.url, 'utf8');
+    } catch (err) {
+        body = fs.readFileSync(`public/index.html`, 'utf8');
+    }*/
+
     res.end(body);
 })
 
