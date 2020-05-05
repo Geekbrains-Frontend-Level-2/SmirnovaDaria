@@ -1,41 +1,41 @@
 let i1 = {
     name: 'Черный блокнот',
-    imgSrc: '../img/product-1.jpg',
+    imgSrc: 'img/product-1.jpg',
     price: 90
 }
 let i2 = {
     name: 'Зеленый блокнот',
-    imgSrc: '../img/product-2.jpg',
+    imgSrc: 'img/product-2.jpg',
     price: 120
 }
 let i3= {
     name: 'Синий блокнот',
-    imgSrc: '../img/product-3.jpg',
+    imgSrc: 'img/product-3.jpg',
     price: 100
 }
 let i4 = {
     name: 'Красный блокнот',
-    imgSrc: '../img/product-4.jpg',
+    imgSrc: 'img/product-4.jpg',
     price: 150
 }
 let i5 = {
     name: 'Черный блокнот',
-    imgSrc: '../img/product-1.jpg',
+    imgSrc: 'img/product-1.jpg',
     price: 90
 }
 let i6 = {
     name: 'Зеленый блокнот',
-    imgSrc: '../img/product-2.jpg',
+    imgSrc: 'img/product-2.jpg',
     price: 120
 }
 let i7= {
     name: 'Синий блокнот',
-    imgSrc: '../img/product-3.jpg',
+    imgSrc: 'img/product-3.jpg',
     price: 100
 }
 let i8 = {
     name: 'Красный блокнот',
-    imgSrc: '../img/product-4.jpg',
+    imgSrc: 'img/product-4.jpg',
     price: 150
 }
 
